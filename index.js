@@ -109,7 +109,6 @@ function validateAnswer(question, userAnswer) {
         console.log(......) // the answer is ...
     */
 
-    return question.answer === userAnswer
 }
 
 function play(url, answer) {

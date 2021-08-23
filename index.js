@@ -64,7 +64,24 @@ function queryExtractor(url) {
     if (!url.includes('?'))
         return
 
-    // your code
+    
+    // create an empty object to store the query elements inside it
+    let newObject = {} 
+
+    // splitting the query each element apart then save the element and its value as key value pair 
+    //  in the newObject Object.
+    url.split('?')[1].split('&').forEach((element) => {
+        newObject[element.split('=')[0].toLowerCase()] = element.split('=')[1].toLowerCase()
+    })
+
+    // Testing wether the object newObject has a property/key/element named type if so returns its value
+    //  or returns 'other' 
+    if (newObject.hasOwnProperty('type')) {
+        return newObject['type']
+    }
+    else{
+        return 'other'
+    }
 
 
 }

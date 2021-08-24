@@ -96,8 +96,9 @@ function pickQuestion(type) {
     const category = game[type] || game['other']
 
     // based on your understand of array index and object dot and bracket notation return the first question in the array then put this question in the end of the array 
-
-
+    let pickedQ = category.questions.shift();
+    category.questions.push(pickedQ);
+    return pickedQ
 }
 
 // this function should return boolean 

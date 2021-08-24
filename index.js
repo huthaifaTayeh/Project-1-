@@ -94,10 +94,7 @@ function pickQuestion(type) {
     // we use || in case the type not exist in the game ( choosing category not exit )
     // ex type = 'fun' fun not exist in game object so it's value undefined
     const category = game[type] || game['other']
-
     // based on your understand of array index and object dot and bracket notation return the first question in the array then put this question in the end of the array
-    
-    
     // take first question of the category and store it in pickedQ
     let pickedQ = category.questions.shift();
     // push the question at the end of the category
